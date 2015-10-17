@@ -1,0 +1,13 @@
+<div class="row">
+  <h1>List a New Job</h1>
+  <div class="col-md-4">
+     <p>Guidelines for New Listings:</p>
+     <ul>
+       <li>Title must be longer than 10 characters.</li>
+       <li>Description must be longer than 144 characters.</li>
+     </ul>
+   </div>
+   <div class="col-md-8">
+      <%= render partial: 'form', locals: { job: @job} %>
+  </div>
+</div>

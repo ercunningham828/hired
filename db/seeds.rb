@@ -2,7 +2,7 @@ require 'faker'
  
  # Create Ruler of Westeros Job
   ruler=Job.create!(
-     title:  "Rule of Westeros",
+     title:  "Ruler of Westeros",
      description:   Faker::Lorem.paragraph
    )
   # Create Member of Nights Watch Job

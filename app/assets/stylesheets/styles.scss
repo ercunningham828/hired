@@ -7,12 +7,26 @@
 */
 /* Default */
 /* ======= Base ======= */
-body {
+.page{
+  padding-top:100px;
+}
+.row {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.btn-success{
+     
+}
+  body {
   font-family: 'Lato', arial, sans-serif;
   color: #444444;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2 {
+  text-align:left;
 }
 h1,
 h2,
@@ -23,7 +37,6 @@ h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #17baef;
-  text-align:center;
   margin-bottom: 10px;
 }
 a {
@@ -76,6 +89,7 @@ a.btn-cta-secondary,
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
+  margin-bottom:50px;
 }
 a.btn-cta-secondary:hover,
 .btn-cta-secondary:hover {
@@ -99,6 +113,7 @@ pre code {
   color: #fff;
   position: fixed;
   width: 100%;
+  z-index:1;
 }
 .header.navbar-fixed-top {
   background: #fff;
@@ -186,11 +201,13 @@ pre code {
   background: #17baef;
   color: #fff;
   padding-top: 150px;
+  margin-top: -50px;
 }
 .promo .title {
   font-size: 98px;
   color: #074f66;
   margin-top: 0;
+  text-align:center;
 }
 .promo .title .highlight {
   color: #eebf3f;
@@ -242,7 +259,7 @@ pre code {
 .about .title {
   color: #074f66;
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 .about .intro {
   max-width: 800px;

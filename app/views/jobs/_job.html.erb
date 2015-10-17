@@ -1,0 +1,9 @@
+<div class="col-md-4">
+  <h4><%=link_to job.title, job%></h4>
+</div>
+<div class="col-md-8">
+  <span><%= link_to "Edit", edit_job_path(job), class: 'badge inline' %></span>
+</div>
+<div class="col-md-12">
+  <p><%=job.description%></p>
+</div>
