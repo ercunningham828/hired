@@ -4,15 +4,19 @@ class ApplicationsController < ApplicationController
     @review=Application.review
     @rejected=Application.rejected
     @hired=Application.hired
+
+    authorize @fresh
   end
 
   def new
     @application=Application.new
+    authorize @application
   end
 
   def create
     @job=Job.find(params[:job_id])
     @application=@job.applications.build(application_params)
+    authorize @application
 
     if @application.save
       flash[:notice]= "Congratulations! You have successfully submitted an application."
@@ -25,6 +29,7 @@ class ApplicationsController < ApplicationController
 
   def show
     @application=Application.find(params[:id])
+    authorize @application
   end
 
 

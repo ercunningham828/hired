@@ -2,7 +2,9 @@
   <h4><%=link_to job.title, job%></h4>
 </div>
 <div class="col-md-8">
-  <span><%= link_to "Edit", edit_job_path(job), class: 'badge inline' %></span>
+  <%if current_admin.present?%>
+    <span><%= link_to "Edit", edit_job_path(job), class: 'badge inline' %></span>
+  <%end%>
 </div>
 <div class="col-md-12">
   <p><%=job.description%></p>

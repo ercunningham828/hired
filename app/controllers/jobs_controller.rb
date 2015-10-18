@@ -10,10 +10,13 @@ class JobsController < ApplicationController
 
   def new
     @job=Job.new
+    authorize @job
   end
 
   def create
     @job=Job.new(params.require(:job).permit(:title,:description))
+    authorize @job
+
     if @job.save
       flash[:notice]= "Job was successfully listed."
       redirect_to @job
@@ -25,10 +28,13 @@ class JobsController < ApplicationController
 
   def edit
     @job=Job.find(params[:id])
+    authorize @job
   end
 
   def update
     @job=Job.find(params[:id])
+    authorize @job
+
     if @job.update_attributes(params.require(:job).permit(:title,:description))
       flash[:notice]= "Job was successfully listed."
       redirect_to @job
@@ -40,6 +46,8 @@ class JobsController < ApplicationController
 
   def destroy
     @job =Job.find(params[:id])
+    authorize @job
+
      title = @job.title
  
      if @job.destroy

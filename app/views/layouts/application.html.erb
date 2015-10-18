@@ -20,8 +20,10 @@
                 <li class="nav-item"><a class="scrollto"<%= link_to "Home", root_path,method: :get %></a></li>
                 <li class="active nav-item sr-only" <%= link_to "Jobs", jobs_path, method: :get %></li>
                 <li class="nav-item"><a class="scrollto"<%= link_to "Jobs", jobs_path,method: :get %></a></li>
+                <%if current_admin.present?%>
                 <li class="active nav-item sr-only" <%= link_to "Manage Applications", applications_path, method: :get %></li>
                 <li class="nav-item"><a class="scrollto"<%= link_to "Manage Applications", applications_path,method: :get %></a></li>
+                <%end%>
               </ul>
             </div>
           </div>

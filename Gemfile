@@ -27,6 +27,7 @@ gem "rails-erd"
 gem 'faker'
 gem "binding_of_caller"
 gem 'devise'
+gem 'pundit'
 
 group :development do
   gem "better_errors"

@@ -6,7 +6,9 @@
     <%=render @jobs%>
   </div>
   <div class="col-md-4">
-    <%= link_to "New Job Listing", new_job_path, class: 'btn btn-success' %>
+    <%if current_admin.present?%>
+      <%= link_to "New Job Listing", new_job_path, class: 'btn btn-success' %>
+    <%end%>
   </div>
 </div>
 
