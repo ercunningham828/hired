@@ -26,6 +26,7 @@ gem "font-awesome-rails"
 gem "rails-erd"
 gem 'faker'
 gem "binding_of_caller"
+gem 'devise'
 
 group :development do
   gem "better_errors"

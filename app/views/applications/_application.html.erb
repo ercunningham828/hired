@@ -1,5 +1,6 @@
 <div class="col-md-12">
-<h4 class="inline"><%=link_to application.name, [application.job, application]%></h4><h6 class="inline"> for <%=application.job.title%></h6>
+  <h4 class="inline"><%=link_to application.name, [application.job, application]%></h4> 
+  <h6 class="inline"> for <%=application.job.title%></h6>
   <small>submitted on <%=application.created_at.strftime("%B %d at %l %p %Z") %></small>
 </div>
 

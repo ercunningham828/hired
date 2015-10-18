@@ -1,4 +1,11 @@
 require 'faker'
+
+# Create Admin user
+    admin = Admin.new(
+     email:    "admin@example.com",
+     password: "helloworld",
+   )
+   admin.save!
  
  # Create Ruler of Westeros Job
   ruler=Job.create!(
