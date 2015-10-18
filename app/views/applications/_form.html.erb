@@ -1,0 +1,17 @@
+<%=form_for [job,application] do |f| %>
+  <%= form_group_tag(application.errors[:name]) do %>
+    <%= f.label "Name"%>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Enter your Full Name" %>
+  <% end %>
+  <%= form_group_tag(application.errors[:phone]) do %>
+    <%= f.label "Phone"%>
+    <%= f.text_field :phone, class: 'form-control', placeholder: "Enter your Phone Number" %>
+  <% end %>
+  <%= form_group_tag(application.errors[:email]) do %>
+    <%= f.label "Email"%>
+    <%= f.text_field :email, class: 'form-control', placeholder: "Enter your email Address" %>
+  <% end %>
+  <div class="form-group">
+    <%= f.submit "Submit", class: 'btn btn-success' %>
+  </div>
+<% end %>

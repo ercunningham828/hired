@@ -1,0 +1,28 @@
+<div class="row">
+  <h1>Applications</h1>
+  <div class="col-md-12">
+   <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#new">New</a></li>
+    <li><a data-toggle="tab" href="#review">Under Review</a></li>
+    <li><a data-toggle="tab" href="#rejected">Rejected</a></li>
+    <li><a data-toggle="tab" href="#hired">Hired</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="new" class="tab-pane fade in active">
+   <%=render @fresh%>
+  </div>
+  <div id="review" class="tab-pane fade">
+     <%=render @review%>
+  </div>
+  <div id="rejected" class="tab-pane fade">
+    <%=render @rejected%>
+  </div>
+   <div id="hired" class="tab-pane fade">
+    <%=render @hired%>
+  </div>
+</div>
+   </div>
+ </div>
+
+
