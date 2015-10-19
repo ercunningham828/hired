@@ -9,7 +9,7 @@ class Application < ActiveRecord::Base
   validates :email, length: { minimum: 10 }, presence: true
   validates :phone, presence: true
 
-
+  default_scope { order('created_at DESC') }
   scope :fresh, -> { where(status: 'New Application') } 
   scope :review, -> { where(status: 'Under Review') } 
   scope :rejected, -> { where(status: 'Rejected') } 

@@ -1,6 +1,6 @@
 require 'faker'
 
-#Remove files and previous uploads
+#Remove files and previous uploads for resumes and coverletters
   FileUtils.rm_rf('public/uploads/application/coverletter/')
   FileUtils.rm_rf('public/uploads/application/resume/')
 
@@ -34,8 +34,13 @@ require 'faker'
      description:   Faker::Lorem.paragraph
    )
 
+  #Create various "posted at" times for the jobs
+    jobs=Job.all
+    jobs.each do |job|
+      job.update_attributes!(created_at: rand(1.days .. 20.days).ago)
+      job.save!
+    end 
 
- 
  # Create Applications
 
  daenerys=Application.create!(

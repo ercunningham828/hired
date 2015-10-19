@@ -1,5 +1,5 @@
 <div class="col-md-4">
-  <h4><%=link_to job.title, job%></h4>
+  <h4><%=link_to job.title, job%></h4><i><small>posted on <%=job.created_at.strftime("%B %d") %></small></i>
 </div>
 <div class="col-md-8">
   <%if current_admin.present?%>
