@@ -7,7 +7,7 @@ class Application < ActiveRecord::Base
 
   validates :name, length: { minimum: 5 }, presence: true
   validates :email, length: { minimum: 10 }, presence: true
-  validates :phone, presence: true
+  validates :phone,:resume,:coverletter, presence: true
 
   default_scope { order('created_at DESC') }
   scope :fresh, -> { where(status: 'New Application') } 
