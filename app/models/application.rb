@@ -15,6 +15,8 @@ class Application < ActiveRecord::Base
   scope :rejected, -> { where(status: 'Rejected') } 
   scope :hired, -> { where(status: 'Hired') } 
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
   
   def set_status
     self.status="New Application"

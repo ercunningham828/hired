@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job=Job.find(params[:id])
+    @job=Job.friendly.find(params[:id])
     @application=Application.new
     @errors=@application.errors
   end
@@ -28,13 +28,13 @@ class JobsController < ApplicationController
   end
 
   def edit
-    @job=Job.find(params[:id])
+    @job=Job.friendly.find(params[:id])
 
     authorize @job
   end
 
   def update
-    @job=Job.find(params[:id])
+    @job=Job.friendly.find(params[:id])
     authorize @job
 
     if @job.update_attributes(params.require(:job).permit(:title,:description))
@@ -47,7 +47,7 @@ class JobsController < ApplicationController
   end
 
   def destroy
-    @job =Job.find(params[:id])
+    @job =Job.friendly.find(params[:id])
     authorize @job
 
      title = @job.title

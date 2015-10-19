@@ -29,6 +29,7 @@ gem "binding_of_caller"
 gem 'devise'
 gem 'pundit'
 gem 'carrierwave'
+gem 'friendly_id', '~> 5.1.0'
 
 group :development do
   gem "better_errors"

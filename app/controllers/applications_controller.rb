@@ -14,7 +14,7 @@ class ApplicationsController < ApplicationController
   end
 
   def create
-    @job=Job.find(params[:job_id])
+    @job=Job.friendly.find(params[:job_id])
     @application=@job.applications.build(application_params)
     authorize @application
 
@@ -28,14 +28,14 @@ class ApplicationsController < ApplicationController
   end
 
   def show
-    @application=Application.find(params[:id])
+    @application=Application.friendly.find(params[:id])
     @job=@application.job
     authorize @application
   end
 
   def update
-    @application=Application.find(params[:id])
-    @job=Job.find(params[:job_id])
+    @application=Application.friendly.find(params[:id])
+    @job=Job.friendly.find(params[:job_id])
     authorize @application
 
     if @application.update_attributes(application_params)
