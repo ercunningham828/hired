@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019012636) do
+ActiveRecord::Schema.define(version: 20151019155858) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20151019012636) do
     t.datetime "updated_at",  null: false
     t.string   "resume"
     t.string   "coverletter"
+    t.text     "notes"
   end
 
   add_index "applications", ["job_id"], name: "index_applications_on_job_id"

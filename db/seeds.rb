@@ -112,7 +112,9 @@ applications=Application.all
 #Update time applied for and status randomly
 status=["New Application","Under Review","Rejected","Hired"]
 applications.each do |app|
-  app.update_attributes!(created_at: rand(10.minutes .. 6.days).ago, phone:Faker::PhoneNumber.cell_phone,status:status.sample)
+  resume=File.open(File.join(Rails.root, 'public/uploads/GOTResume.pdf'))
+  coverletter=File.open(File.join(Rails.root, 'public/uploads/GOTCoverLetter.pdf'))
+  app.update_attributes!(created_at: rand(10.minutes .. 6.days).ago, phone:Faker::PhoneNumber.cell_phone,status:status.sample,resume:resume,coverletter:coverletter)
   app.save!
 end
 

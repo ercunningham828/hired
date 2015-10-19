@@ -29,13 +29,27 @@ class ApplicationsController < ApplicationController
 
   def show
     @application=Application.find(params[:id])
+    @job=@application.job
     authorize @application
   end
 
+  def update
+    @application=Application.find(params[:id])
+    @job=Job.find(params[:job_id])
+    authorize @application
+
+    if @application.update_attributes(application_params)
+      flash[:notice]= "Application was successfully updated."
+      render :show
+    else
+      flash[:error]= "There was an error in updating the application."
+      render :show
+    end
+  end
 
   private
 
   def application_params
-    params.require(:application).permit(:name,:phone,:email,:status,:resume,:coverletter)
+    params.require(:application).permit(:name,:phone,:email,:status,:resume,:coverletter,:notes)
   end
 end

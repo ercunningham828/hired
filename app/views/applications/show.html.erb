@@ -1,20 +1,21 @@
 <div class="row">
   <div class="col-md-12">
       <a><%= link_to "Back to all Applications",applications_path, class: 'btn btn-cta-secondary btn-small' %></a>
-   </div>
-  <div class="col-md-12"><h1><%=@application.name%></h1></div>
+  </div>
   <div class="col-md-8">
+    <h1><%=@application.name%></h1>
     <p><b>Position:</b> <%=@application.job.title%></p>
     <p><b>Phone:</b> <%=@application.phone%></p>
     <p><b>Email:</b> <%=@application.email%></p>
-    <a href="<%=@application.resume%>" class="btn btn-lg">
+    <a href="<%=@application.resume%>" target="blank" class="btn btn-lg">
       <i class="fa fa-download"></i> Download Resume
                     </a>
-    <a href="<%=@application.coverletter%>" class="btn btn-lg">
+    <a href="<%=@application.coverletter%>" target="blank" class="btn btn-lg">
         <i class="fa fa-download"></i> Download Coverletter
                     </a>
   </div>
   <div class="col-md-4">
-   <p>This area is reserved for updating the status</p>
+    <h3>Admin Section</h3>
+    <%= render partial: 'admin', locals: {job:@job, application:@application}%>
   </div>
 </div>
