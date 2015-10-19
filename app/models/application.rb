@@ -3,7 +3,7 @@ class Application < ActiveRecord::Base
   mount_uploader :coverletter, CoverletterUploader
 
   belongs_to :job
-  after_create :set_status
+  after_initialize :set_status
 
   validates :name, length: { minimum: 5 }, presence: true
   validates :email, length: { minimum: 10 }, presence: true
@@ -20,6 +20,5 @@ class Application < ActiveRecord::Base
   
   def set_status
     self.status="New Application"
-    self.save
   end
 end

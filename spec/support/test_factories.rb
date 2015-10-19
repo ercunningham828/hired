@@ -10,6 +10,8 @@ module TestFactories
      email "test@gmail.com"
      phone "111-111-111"
      job { Job.create(title: 'New Job') }
+     resume {File.open(File.join(Rails.root, 'public/uploads/GOTResume.pdf'))}
+     coverletter {File.open(File.join(Rails.root, 'public/uploads/GOTCoverLetter.pdf'))}
    end
 
     factory :job do

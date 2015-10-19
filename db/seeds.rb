@@ -42,78 +42,77 @@ require 'faker'
     end 
 
  # Create Applications
-
- daenerys=Application.create!(
+applications=[
+ daenerys=Application.new(
   name:"Daenerys Targaryen",
   email: "motherofdragons@gmail.com",
   phone: Faker::PhoneNumber.cell_phone,
   job: ruler
-  )
+  ),
 
- joff=Application.create!(
+ joff=Application.new(
   name:"Joffrey Baratheon",
   email: "kingjoffrey@kingslanding.com",
   phone: Faker::PhoneNumber.cell_phone,
   job: ruler
-  )
+  ),
 
-  stannis=Application.create!(
+  stannis=Application.new(
   name:"Stannis Baratheon",
   email: "stantheman@hotmail.com",
   phone: Faker::PhoneNumber.cell_phone,
   job: ruler
-  )
+  ),
 
-  ned=Application.create!(
+  ned=Application.new(
   name:"Eddard Stark",
   email: "winteriscoming@yahoo.com",
   phone: Faker::PhoneNumber.cell_phone,
   job: member
-  )
+  ),
 
- samwell=Application.create!(
+ samwell=Application.new(
   name:"Samwell Tarly",
   email: "samtheslayer@gmail.com",
   phone: Faker::PhoneNumber.cell_phone,
   job: member
-  )
+  ),
 
-roose=Application.create!(
+roose=Application.new(
   name:"Roose Bolton",
   email: "roose@flayedman.com",
   phone: Faker::PhoneNumber.cell_phone,
   job: warden
-  )
+  ),
 
-theon=Application.create!(
+theon=Application.new(
   name:"Theon Greyjoy",
   email: "reek@sbcglobal.net",
   phone: Faker::PhoneNumber.cell_phone,
   job: warden
-  )
+  ),
 
-jon=Application.create!(
+jon=Application.new(
   name:"Jon Snow",
   email: "youknownothing@nightswatch.com",
   phone: Faker::PhoneNumber.cell_phone,
   job: commander
-  )
+  ),
 
-janos=Application.create!(
+janos=Application.new(
   name:"Janos Slynt",
   email: "janos@nightswatch.com",
   phone: Faker::PhoneNumber.cell_phone,
   job: commander
-  )
+  ),
 
-bowen=Application.create!(
+bowen=Application.new(
   name:"Bowen Marsh",
   email: "bowen@nightswatch.com",
   phone: Faker::PhoneNumber.cell_phone,
   job: commander
-  )
+  )]
 
-applications=Application.all
 #Update time applied for and status randomly
 status=["New Application","Under Review","Rejected","Hired"]
 applications.each do |app|

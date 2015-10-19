@@ -40,7 +40,7 @@ class ApplicationsController < ApplicationController
 
     if @application.update_attributes(application_params)
       flash[:notice]= "Application was successfully updated."
-      render :show
+      redirect_to [@job,@application]
     else
       flash[:error]= "There was an error in updating the application."
       render :show
