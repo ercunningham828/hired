@@ -1,5 +1,10 @@
 == README
 
+'''git clone https://github.com/ercunningham828/hired.git
+cd hired
+./bin/setup
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
