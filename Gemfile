@@ -28,6 +28,7 @@ gem 'faker'
 gem "binding_of_caller"
 gem 'devise'
 gem 'pundit'
+gem 'carrierwave'
 
 group :development do
   gem "better_errors"

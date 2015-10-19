@@ -36,6 +36,6 @@ class ApplicationsController < ApplicationController
   private
 
   def application_params
-    params.require(:application).permit(:name,:phone,:email,:status)
+    params.require(:application).permit(:name,:phone,:email,:status,:resume,:coverletter)
   end
 end

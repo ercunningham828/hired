@@ -1,4 +1,7 @@
 class Application < ActiveRecord::Base
+  mount_uploader :resume, ResumeUploader
+  mount_uploader :coverletter, CoverletterUploader
+
   belongs_to :job
   after_create :set_status
 

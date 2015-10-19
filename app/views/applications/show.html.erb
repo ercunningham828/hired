@@ -4,8 +4,15 @@
    </div>
   <div class="col-md-12"><h1><%=@application.name%></h1></div>
   <div class="col-md-8">
-    <p>Phone: <%=@application.phone%></p>
-    <p>Email: <%=@application.email%></p>
+    <p><b>Position:</b> <%=@application.job.title%></p>
+    <p><b>Phone:</b> <%=@application.phone%></p>
+    <p><b>Email:</b> <%=@application.email%></p>
+    <a href="<%=@application.resume%>" class="btn btn-lg">
+      <i class="fa fa-download"></i> Download Resume
+                    </a>
+    <a href="<%=@application.coverletter%>" class="btn btn-lg">
+        <i class="fa fa-download"></i> Download Coverletter
+                    </a>
   </div>
   <div class="col-md-4">
    <p>This area is reserved for updating the status</p>

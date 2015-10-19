@@ -1,5 +1,9 @@
 require 'faker'
 
+#Remove files and previous uploads
+  FileUtils.rm_rf('public/uploads/application/coverletter/')
+  FileUtils.rm_rf('public/uploads/application/resume/')
+
 # Create Admin user
     admin = Admin.new(
      email:    "admin@example.com",
