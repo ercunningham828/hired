@@ -6,6 +6,7 @@ class JobsController < ApplicationController
   def show
     @job=Job.find(params[:id])
     @application=Application.new
+    @errors=@application.errors
   end
 
   def new
@@ -28,6 +29,7 @@ class JobsController < ApplicationController
 
   def edit
     @job=Job.find(params[:id])
+
     authorize @job
   end
 

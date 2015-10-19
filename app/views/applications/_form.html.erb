@@ -1,22 +1,32 @@
 <%=form_for [job,application] do |f| %>
+  <% if application.errors.any? %>
+    <div class="alert alert-danger">
+      <h4>There are <%= pluralize(application.errors.count, "error") %></h4>
+      </ul>
+        <%application.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <%end%>
+      </ul>
+    </div>
+  <%end%>
   <%= form_group_tag(application.errors[:name]) do %>
-    <%= f.label "Name"%>
+    <%= f.label "Name*"%>
     <%= f.text_field :name, class: 'form-control', placeholder: "Enter your Full Name" %>
   <% end %>
   <%= form_group_tag(application.errors[:phone]) do %>
-    <%= f.label "Phone"%>
+    <%= f.label "Phone*"%>
     <%= f.text_field :phone, class: 'form-control', placeholder: "Enter your Phone Number" %>
   <% end %>
   <%= form_group_tag(application.errors[:email]) do %>
-    <%= f.label "Email"%>
+    <%= f.label "Email*"%>
     <%= f.text_field :email, class: 'form-control', placeholder: "Enter your email Address" %>
   <% end %>
   <div class="form-group">
-         <%= f.label :resume %>
+         <%= f.label "Resume (Formats: pdf, doc, docx)*" %>
          <%= f.file_field :resume %>
   </div>
    <div class="form-group">
-         <%= f.label :coverletter%>
+         <%= f.label "Cover letter (Formats: pdf, doc, docx)*"%>
          <%= f.file_field :coverletter %>
   </div>
   <div class="form-group">

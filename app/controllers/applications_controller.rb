@@ -23,7 +23,7 @@ class ApplicationsController < ApplicationController
       redirect_to @job
     else
       flash[:error]= "There was an error in submitting your application. Please try again."
-      render :new
+      render 'jobs/show'
     end
   end
 
