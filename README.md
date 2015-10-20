@@ -1,4 +1,3 @@
-**Heroku:** https://ercunningham828-hired.herokuapp.com/
 
 HIRED! A HIRING PLATFORM
 =======
