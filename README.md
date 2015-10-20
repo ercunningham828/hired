@@ -15,7 +15,9 @@ HOW TO RUN HIRED
 git clone https://github.com/ercunningham828/hired.git```
 3. Once the repository has been downloaded, move into the app directory through this command:```cd hired```
 4. From the app directory, run the setup file with this command:
-```./bin/setup```
+```
+./bin/setup
+```
 
 The setup file will run the remaining setup steps, as well as open a web browser window for viewing the app.  You may have to manually refresh the web browser after the server has started to see the home page.
 
